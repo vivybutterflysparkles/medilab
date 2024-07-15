@@ -1,0 +1,29 @@
+{% extends 'starter-page.html' %}
+{% load static %}
+
+{% block body %}
+<form action="" class="container" method="POST">
+{% csrf_token %}
+
+    <br><br>
+    <label for="fullname" class="form-label">fullname</label>
+    <input type="text" id="name" name="fullname" class="form-control" placeholder="fullname">
+
+    <br><br>
+    <label for="email" class="form-label">email</label>
+    <input type="email" id="email" name="email" class="form-control" placeholder="abc@gmail.com">
+    
+    <br><br>
+    <label for="medicalhistory" class="form-label">medical history</label>
+    <textarea name="medicalhistory" id="medicalhistory" cols="30" rows="5" class="form-control" ></textarea>
+    
+    
+    <br><br>
+    <label for="age" class="form-label">age</label>
+    <input type="number" name="age" id="age" class="form-control" placeholder="age">
+    
+    <br><br>
+    <button type="submit" class="btn btn-primary text-center">save</button>
+
+    </form>
+{% endblock %}
